@@ -20,7 +20,9 @@ export class SignupComponent {
     this.myInputField?.nativeElement.focus();
     }
   onSubmit(ngForm:NgForm){
-
+    if(!ngForm.valid){
+      return
+    }
     this.auth.updateLogin.next(true);
     this.auth.createUser(ngForm.value).subscribe((response:createUser)=>{
       alert("success");

@@ -17,4 +17,7 @@ export class AuthService {
   loginUser(payload:fetchUser){
     return this.http.post<fetchUser>(`${this.serviceUrl}api/v1/user/login`,payload);
   }
+  fetchAllUserList(){
+    return this.http.get(`${this.serviceUrl}api/v1/user/getAllUser`);
+  }
 }

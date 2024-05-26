@@ -20,6 +20,9 @@ export class LoginComponent {
     this.myInputField?.nativeElement.focus();
     }
   onSubmit(ngForm:NgForm){
+    if(!ngForm.valid){
+      return
+    }
     console.log(ngForm.value);
     this.auth.updateLogin.next(true);
     this.auth.loginUser(ngForm.value).subscribe((response:fetchUser) =>{
