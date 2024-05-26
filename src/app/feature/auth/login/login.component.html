@@ -1,1 +1,53 @@
-<p>login works!</p>
+
+
+<div class="super-parent">
+  <div class="parent">
+      <div class="left">
+        <div class="left-parent">
+          <span class="text-css">Login</span>
+          <p class="text-css-1">Get access to your Orders, Wishlist and Recommendations</p>
+       </div>
+      </div>
+      <div class="right">
+          <div class="row d-flex justify-content-center align-items-center">
+              <div class="col-12 parentpara">
+                  <form #usrlogin="ngForm" (ngSubmit)="onSubmit(usrlogin)" novalidate>
+
+                      <mat-form-field class="example-full-width">
+                          <mat-label>Email</mat-label>
+                          <input #myinput type="email" matInput  name="email" ngModel #email="ngModel">
+                          <mat-error *ngIf="!email.valid">
+                            Please enter a valid email address
+                          </mat-error>
+                          <mat-error >
+                            Email is <strong>required</strong>
+                          </mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="example-full-width">
+                          <mat-label>Password</mat-label>
+                          <input #myinput type="password" matInput  name="password" ngModel #password="ngModel">
+                          <mat-error *ngIf="!password.valid">
+                            Please enter a valid password
+                          </mat-error>
+                          <mat-error >
+                            password is <strong>required</strong>
+                          </mat-error>
+                        </mat-form-field>
+                      <div class="m-3 mb-0">
+                          <p class="text-basic paraFont mb-0"> By continuing, you agree to Flipkart's <span class="text-primary">Terms of Use</span>  and <span class="text-primary">Privacy Policy</span>.</p>
+                      </div>
+                      <div class="form-group mt-3 m-3" style="width: 80%;">
+                        <button mat-raised-button color="warn" (click)="onContinue()" style="width: 100%;">Continue</button>
+                    </div>
+                    <p class="bottomPara">
+                        <a href="" routerLink="/auth/signup" style="text-decoration: none;">New to HP Code Genius ? Create an account.</a>
+                    </p>
+                  </form>
+                 <div>
+                 </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
