@@ -3,11 +3,23 @@
 
   <span style="flex:auto"></span>
   <div class="d-flex align-items-center justify-content-center">
-    <span class="m-3 home">Home</span>
-    <span class="m-3 home">About</span>
-    <span class="m-3 home">Services</span>
-    <span class="m-3 home">Blog</span>
-    <span class="m-3 home">Courses</span>
+    <ul class="header-nav">
+      <li  [routerLinkActive]="['link-active']"  [routerLinkActiveOptions]="{ exact: true }">
+        <a class="m-3 home"  routerLink="/">Home</a>
+      </li>
+      <li [routerLinkActive]="['link-active']">
+        <a class="m-3 home" routerLink="/about">About</a>
+      </li>
+      <li [routerLinkActive]="['link-active']">
+        <a class="m-3 home">Services</a>
+      </li>
+      <li [routerLinkActive]="['link-active']">
+        <a class="m-3 home">Blog</a>
+      </li>
+      <li [routerLinkActive]="['link-active']">
+        <a class="m-3 home">Courses</a>
+      </li>
+    </ul>
    <button class="btn btn-primary m-3" style="border-radius: 98px; padding-left: 16px; padding-right:16px;">LogIn/SignUp</button>
   </div>
   <span class="mr-5 pr-5"></span>
