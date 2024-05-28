@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { SharedRoutingModule } from './shared-routing.module';
-import { MatModule } from './mat/mat.module';
+import { MatModule } from '../shared/mat/mat.module';
 
 
 @NgModule({
-  declarations: [MatModule],
+  declarations: [],
   imports: [
     CommonModule,
     SharedRoutingModule
